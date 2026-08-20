@@ -2,7 +2,7 @@
 
 Landing page oficial do **Identity Shot**, hub de conteúdo sobre identidade digital, IAM e segurança.
 
-🔗 **Site publicado:** https://SEU-USUARIO.github.io/identity-shot-landing/
+🔗 **Site publicado:** https://rodrigoffonseca.github.io/identity-shot-landing/
 
 ## Conteúdo
 
@@ -16,11 +16,9 @@ Landing page oficial do **Identity Shot**, hub de conteúdo sobre identidade dig
 
 Página estática em **HTML + CSS puro** (sem build step), com imagens embutidas em base64 — um único arquivo `index.html`, pronto para qualquer hospedagem estática.
 
-## Como publicar no GitHub Pages
+## GitHub Pages
 
-1. Vá em **Settings → Pages** neste repositório
-2. Em **Source**, selecione a branch `main` e a pasta `/ (root)`
-3. Salve — o GitHub publica automaticamente em `https://SEU-USUARIO.github.io/NOME-DO-REPO/`
+Publicado a partir da branch `master`, pasta `/ (root)`, em **Settings → Pages** deste repositório.
 
 ## Como editar
 
