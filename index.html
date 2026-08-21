@@ -778,7 +778,7 @@
           <a href="https://www.linkedin.com/in/rodrigoffonseca/" target="_blank" rel="noopener">in — Rodrigo Fonseca</a>
         </div>
       </div>
-      <form class="contato-form" onsubmit="event.preventDefault(); alert('Formulário ainda não conectado — me passe o e-mail de destino para eu configurar o envio.');">
+      <form class="contato-form" onsubmit="handleContatoSubmit(event)">
         <div class="field">
           <label for="nome">Nome</label>
           <input id="nome" type="text" placeholder="Seu nome" required>
@@ -835,6 +835,19 @@
     </div>
   </div>
 </footer>
+
+<script>
+  function handleContatoSubmit(event) {
+    event.preventDefault();
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var msg = document.getElementById('msg').value;
+    var destinatarios = 'diego.ips@gmail.com,rodrigoffonseca@gmail.com,contato@identityshot.com.br';
+    var assunto = encodeURIComponent('Contato via site — Identity Shot');
+    var corpo = encodeURIComponent('Nome: ' + nome + '\nE-mail: ' + email + '\n\nMensagem:\n' + msg);
+    window.location.href = 'mailto:' + destinatarios + '?subject=' + assunto + '&body=' + corpo;
+  }
+</script>
 
 </body>
 </html>
