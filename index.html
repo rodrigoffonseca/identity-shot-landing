@@ -319,6 +319,42 @@
   }
   .desafio-card h4{font-size:16.5px;color:var(--navy-3);margin-bottom:10px;line-height:1.3;}
   .desafio-card p{font-size:13.5px;color:var(--muted);line-height:1.55;}
+  .mentoria-sub{margin-top:72px;}
+  .mentoria-sub .section-head{margin-bottom:0;}
+  .trilha-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:36px;}
+  .trilha-grid .desafio-card p{margin-top:2px;}
+  .resultados-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;}
+  .resultado-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;}
+  .resultado-card h4{font-size:16px;color:var(--navy-3);margin-bottom:16px;line-height:1.3;}
+  .check-list{display:flex;flex-direction:column;gap:12px;}
+  .check-list.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;}
+  .check-list div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);line-height:1.5;}
+  .resultado-card .check-list div{font-size:13.5px;}
+  .check-list div::before{
+    content:"";flex:0 0 auto;width:6px;height:6px;border-radius:50%;
+    background:var(--teal);margin-top:7px;
+  }
+  .entregaveis-block{margin-top:36px;}
+  .entregaveis-block h4{font-size:16px;color:var(--navy-3);margin-bottom:18px;}
+  .mentoria-cta{
+    margin-top:56px;background:var(--navy-3);border-radius:var(--radius);
+    padding:40px 44px;display:flex;align-items:center;justify-content:space-between;
+    gap:32px;flex-wrap:wrap;color:#fff;position:relative;overflow:hidden;
+  }
+  .mentoria-cta::before{
+    content:"";position:absolute;top:-120px;right:-80px;width:320px;height:320px;
+    border-radius:50%;background:radial-gradient(circle, rgba(1,179,173,0.25), transparent 70%);
+  }
+  .mentoria-cta-text{position:relative;z-index:1;max-width:520px;}
+  .mentoria-cta-text strong{display:block;font-size:20px;margin-bottom:8px;}
+  .mentoria-cta-text span{font-size:14.5px;color:#B9C7D4;line-height:1.6;}
+  .mentoria-cta .btn-cta{
+    position:relative;z-index:1;background:#fff;color:var(--navy-3);
+    padding:15px 28px;border-radius:999px;font-weight:700;font-size:14.5px;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .mentoria-cta .btn-cta:hover{background:var(--teal-2);transform:translateY(-2px);}
 
   /* ---------- contato ---------- */
   #contato{background:var(--mist);}
@@ -385,6 +421,8 @@
     .podcast-grid{grid-template-columns:1fr;}
     .mentoria-top{grid-template-columns:1fr;}
     .desafios-grid{grid-template-columns:1fr 1fr;}
+    .resultados-grid{grid-template-columns:1fr;}
+    .check-list.two-col{grid-template-columns:1fr;}
     .contato-grid{grid-template-columns:1fr;}
     .footer-top{flex-direction:column;}
   }
@@ -396,6 +434,7 @@
     section{padding:70px 0;}
     .desafios-grid{grid-template-columns:1fr;}
     .contato-info,.contato-form{padding:34px 26px;}
+    .mentoria-cta{padding:32px 26px;flex-direction:column;align-items:flex-start;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -570,8 +609,13 @@
       <div class="lead-block">
         <span class="eyebrow">Mentoria</span>
         <h2 style="font-size:34px;color:var(--navy-3);margin:14px 0 20px;line-height:1.25;">Mentoria em Arquitetura de Identidade e Gestão de Acessos</h2>
+        <p>Mentoria individual e personalizada — 12 semanas de conteúdo distribuídas ao longo de até 6 meses, no ritmo que cabe na sua rotina. Você desenvolve dois pilares complementares: excelência técnica em IAM e a capacidade de transformar esse conhecimento em influência, decisão e crescimento de carreira.</p>
         <p>Você assume o papel de Arquiteto Líder de IAM e precisa desenhar, justificar e defender uma arquitetura moderna, segura e alinhada ao risco — a partir de um caso de estudo real e completo, com contexto de negócio, ambiente tecnológico e cobrança do board.</p>
-        <p>O desafio cobre desde a base autoritativa de HR e o ciclo de vida Joiner–Mover–Leaver até quatro problemas que aparecem em praticamente toda RFP de IAM: acesso privilegiado sob demanda, segregação de funções, autoatendimento e um modelo de roles que realmente funcione.</p>
+        <div class="stat-row">
+          <div><span class="stat-num">12 sem.</span><span class="stat-label">Distribuídas em<br>até 6 meses</span></div>
+          <div><span class="stat-num">1:1</span><span class="stat-label">Mentoria individual<br>e personalizada</span></div>
+          <div><span class="stat-num">18h</span><span class="stat-label">Sob medida para sua<br>necessidade</span></div>
+        </div>
       </div>
       <div class="mentoria-facts">
         <span class="eyebrow">O caso de estudo</span>
@@ -582,6 +626,8 @@
         <div class="fact-item"><span>Prazo simulado</span><span>Auditoria em 6 meses</span></div>
       </div>
     </div>
+
+    <p style="font-size:15px;color:var(--muted);max-width:720px;margin-bottom:24px;">O desafio cobre desde a base autoritativa de HR e o ciclo de vida Joiner–Mover–Leaver até quatro problemas que aparecem em praticamente toda RFP de IAM — um exemplo do tipo de caso real que você resolve ao longo da mentoria:</p>
 
     <div class="desafios-grid">
       <div class="desafio-card">
@@ -603,6 +649,99 @@
         <div class="desafio-num">04 / RBAC</div>
         <h4>Modelo de roles consistente</h4>
         <p>Business, IT e Application Roles funcionando de forma hierárquica entre on-premises, cloud e SaaS, com governança de role owners.</p>
+      </div>
+    </div>
+
+    <div class="mentoria-sub">
+      <div class="section-head">
+        <span class="eyebrow">Trilha do programa</span>
+        <h2 style="font-size:30px;">Da fundação à especialização, em 7 etapas</h2>
+        <p>Cada etapa conecta teoria com prática de forma incremental — aplicada ao seu caso real ao longo de toda a mentoria.</p>
+      </div>
+      <div class="trilha-grid">
+        <div class="desafio-card">
+          <div class="desafio-num">FASE 0 · Semanas 1-2</div>
+          <h4>Assessment &amp; Foundation</h4>
+          <p>Diagnóstico técnico, de arquitetura, negócio e comunicação, com entrevista guiada por cenários reais e nivelamento de fundamentos.</p>
+        </div>
+        <div class="desafio-card">
+          <div class="desafio-num">MÓDULO 1 · Semanas 3-4</div>
+          <h4>Fundamentos e Governança</h4>
+          <p>Least Privilege, Separation of Duties, Zero Trust, Identity Lifecycle, RBAC vs ABAC, frameworks NIST/ISO/SOC2 e ITDR.</p>
+        </div>
+        <div class="desafio-card">
+          <div class="desafio-num">MÓDULO 2 · Semanas 5-7</div>
+          <h4>Arquitetura IAM</h4>
+          <p>SAML, OAuth 2.0, OpenID Connect, SSO, MFA, Passwordless, PAM, IGA, CIEM e CIAM — e como escolher entre eles.</p>
+        </div>
+        <div class="desafio-card">
+          <div class="desafio-num">MÓDULO 3 · Semanas 8-9</div>
+          <h4>Implementação &amp; Cenários Reais</h4>
+          <p>Integração com AWS, Microsoft Entra ID e Okta, automação e Infrastructure as Code, troubleshooting, migração e consolidação.</p>
+        </div>
+        <div class="desafio-card">
+          <div class="desafio-num">MÓDULO 4 · Semanas 10-11</div>
+          <h4>Estratégia, Negócio e Influência</h4>
+          <p>Business case de IAM para CISO, CIO e CFO, comunicação executiva e apresentação de arquitetura para o board.</p>
+        </div>
+        <div class="desafio-card">
+          <div class="desafio-num">TEMA TRANSVERSAL · Todo o programa</div>
+          <h4>IA e o futuro da identidade</h4>
+          <p>Identidades não-humanas, agentes de IA, governança em escala e os novos riscos que essas identidades trazem.</p>
+        </div>
+        <div class="desafio-card">
+          <div class="desafio-num">FASE FINAL · Semana 12</div>
+          <h4>Especialização</h4>
+          <p>Escolha uma trilha de aprofundamento — IGA, PAM, CIAM, Zero Trust/ZTNA ou Identity for AI — e conclua com um projeto final aplicado.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mentoria-sub">
+      <div class="section-head">
+        <span class="eyebrow">O que você vai ganhar</span>
+        <h2 style="font-size:30px;">Resultados esperados</h2>
+      </div>
+      <div class="resultados-grid">
+        <div class="resultado-card">
+          <h4>Transformação profissional</h4>
+          <div class="check-list">
+            <div>Capacidade de desenhar e liderar arquiteturas IAM em organizações complexas</div>
+            <div>Preparação para cargos como IAM Architect, Identity Lead e Security Architect</div>
+          </div>
+        </div>
+        <div class="resultado-card">
+          <h4>Conhecimento prático diferenciado</h4>
+          <div class="check-list">
+            <div>Experiência baseada em cenários reais e playbooks aplicáveis no dia a dia</div>
+            <div>Decisões arquiteturais orientadas a risco e a negócio, não só a ferramenta</div>
+          </div>
+        </div>
+        <div class="resultado-card">
+          <h4>Aceleração de carreira</h4>
+          <div class="check-list">
+            <div>Redução de 2 a 3 anos de tentativa e erro na especialização em IAM</div>
+            <div>Posicionamento profissional estratégico e orientação sobre mercado e certificações</div>
+          </div>
+        </div>
+      </div>
+      <div class="entregaveis-block">
+        <h4>Entregáveis do programa</h4>
+        <div class="check-list two-col">
+          <div>Arquitetura IAM completa, construída ao longo do programa</div>
+          <div>Projeto final aplicável a um cenário real de mercado</div>
+          <div>Roadmap de carreira personalizado</div>
+          <div>Perfil de LinkedIn otimizado para posições em IAM</div>
+          <div>Certificado de conclusão do programa</div>
+          <div>Acesso vitalício aos materiais e recursos compartilhados</div>
+        </div>
+      </div>
+      <div class="mentoria-cta">
+        <div class="mentoria-cta-text">
+          <strong>Vagas limitadas — mentoria individual, sob medida ao seu momento de carreira.</strong>
+          <span>Conte um pouco sobre onde você está hoje e para onde quer ir. A gente responde com os detalhes do programa e do investimento.</span>
+        </div>
+        <a href="#contato" class="btn-cta">Entrar em contato →</a>
       </div>
     </div>
   </div>
